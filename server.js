@@ -55,6 +55,12 @@ app.get("/json", (req, resp) => {
 })
 
 
+app.get("/projects", (req, resp)=> {
+	resp.render("projects.hbs",{
+		pageTitle: "Portfolio"
+	})
+})
+
 app.get("/bad", (req, resp) => {
 	resp.status(400).send({
 		errMsg: "bad link"
